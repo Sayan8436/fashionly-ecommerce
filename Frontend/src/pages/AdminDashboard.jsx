@@ -5,7 +5,7 @@ export default function AdminDashboard() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/orders/admin", {
+    fetch("https://fashionly-backend-26ij.onrender.com/api/orders/admin", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -19,7 +19,7 @@ export default function AdminDashboard() {
   }, []);
 
   const updateStatus = async (id, status) => {
-    await fetch(`http://localhost:5000/api/orders/${id}`, {
+    await fetch(`https://fashionly-backend-26ij.onrender.com/api/orders/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
