@@ -31,3 +31,4 @@ app.use("/api/admin", require("./routes/admin"));
 
 app.use("/api/orders", require("./routes/orderRoutes"));
 
+app.use("/api/admin", require("./routes/adminProductRoutes"));

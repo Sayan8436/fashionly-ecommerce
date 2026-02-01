@@ -15,7 +15,7 @@ import Signup from "./pages/Signup";
 import AdminDashboard from "./pages/AdminDashboard";
 
 import {jwtDecode} from "jwt-decode";
-
+import AdminProducts from "./pages/AdminProducts";
 /* ======================
    AUTH HELPERS
 ====================== */
@@ -86,6 +86,13 @@ export default function App() {
           path="/admin"
           element={isAdmin() ? <AdminDashboard /> : <Navigate to="/" />}
         />
+
+        <Route
+          path="/admin/products"
+          element={isAdmin() ? <AdminProducts /> : <Navigate to="/" />}
+        />
+
+
       </Routes>
     </BrowserRouter>
   );
